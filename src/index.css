@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #3b82f6;
+  --color-secondary: #6b7280;
+  --color-accent: #2563eb;
+  --color-background: #f3f4f6;
+  --color-card: #ffffff;
+  --color-text: #111827;
+  --color-textSecondary: #4b5563;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 rounded-lg transition-colors;
+    background-color: var(--color-primary);
+    color: var(--color-card);
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 rounded-lg transition-colors;
+    background-color: var(--color-secondary);
+    color: var(--color-card);
+  }
+
+  .card {
+    @apply rounded-xl shadow-md;
+    background-color: var(--color-card);
+    color: var(--color-text);
+  }
+
+  .nav-tab {
+    @apply px-4 py-2 transition-colors;
+    color: var(--color-textSecondary);
+  }
+
+  .nav-tab-active {
+    @apply nav-tab;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}
